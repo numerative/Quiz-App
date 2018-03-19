@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/contestant_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:padding="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            style="@style/Questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q1. Who is the President of the United States?" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/radio_button_q1a1"
+                style="@style/Answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hillary Clinton" />
+
+            <RadioButton
+                android:id="@+id/radio_button_q1a2"
+                style="@style/Answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Donald Trump" />
+
+            <RadioButton
+                android:id="@+id/radio_button_q1a3"
+                style="@style/Answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Barack Obama" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <TextView
+            style="@style/Questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q2. Who is the Prime Minister of Russia?" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <RadioButton
+                android:id="@+id/radio_button_q2a1"
+                style="@style/Answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mikhail Gorbachev" />
+
+            <RadioButton
+                android:id="@+id/radio_button_q2a2"
+                style="@style/Answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vladimir Putin" />
+
+            <RadioButton
+                android:id="@+id/radio_button_q2a3"
+                style="@style/Answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dmitri Goskhav" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <TextView
+            style="@style/Questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q3. Which of these ingredients are put in Chai Tea?" />
+
+        <CheckBox
+            android:id="@+id/checkbox_q3a1"
+            style="@style/Answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Milk" />
+
+        <CheckBox
+            android:id="@+id/checkbox_q3a2"
+            style="@style/Answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soy Sauce" />
+
+        <CheckBox
+            android:id="@+id/checkbox_q3a3"
+            style="@style/Answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tea" />
+
+        <CheckBox
+            android:id="@+id/checkbox_q3a4"
+            style="@style/Answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sugar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <TextView
+            style="@style/Questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Q4. Who suggested the phone you currently use?" />
+
+        <EditText
+            android:id="@+id/edit_text_q4a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your Answer here"
+            android:padding="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="printResults"
+            android:padding="8dp"
+            android:text="let's find out the right answers" />
+
+        <TextView
+            android:id="@+id/results"
+            style="@style/Answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="" />
+
+    </LinearLayout>
+
+</ScrollView>
