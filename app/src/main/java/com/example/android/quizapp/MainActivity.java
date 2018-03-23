@@ -72,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Method that checks correctness of question 3 answer
     public boolean checkQuestion3() {
-        CheckBox cb1 = (CheckBox) findViewById(R.id.checkbox_q3a1);
-        CheckBox cb2 = (CheckBox) findViewById(R.id.checkbox_q3a2);
-        CheckBox cb3 = (CheckBox) findViewById(R.id.checkbox_q3a3);
-        CheckBox cb4 = (CheckBox) findViewById(R.id.checkbox_q3a4);
+        CheckBox cb1 = findViewById(R.id.checkbox_q3a1);
+        CheckBox cb2 = findViewById(R.id.checkbox_q3a2);
+        CheckBox cb3 = findViewById(R.id.checkbox_q3a3);
+        CheckBox cb4 = findViewById(R.id.checkbox_q3a4);
         return (cb1.isChecked() && !cb2.isChecked() && cb3.isChecked() && cb4.isChecked());
     }
 

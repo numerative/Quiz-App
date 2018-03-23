@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--Custom Colours-->
+    <color name="dark">#303F9F</color>
+    <color name="text_questions">#ffffff</color>
+    <color name="text_answers">#ffffff</color>
 </resources>

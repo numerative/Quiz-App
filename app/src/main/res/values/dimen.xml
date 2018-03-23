@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Text Sizes-->
+    <dimen name="question_text_size">16sp</dimen>
+    <dimen name="answer_text_size">16sp</dimen>
+
+    <!--Margin and Padding Values-->
+    <dimen name="regular_gap">8dp</dimen>
+</resources>
