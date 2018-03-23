@@ -32,7 +32,6 @@
 
         <RadioGroup
             android:id="@+id/radio_group_q1"
-            style="@style/RadioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -71,7 +70,6 @@
 
         <RadioGroup
             android:id="@+id/radio_group_q2"
-            style="@style/RadioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -155,13 +153,13 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="@dimen/breathing_gap" />
 
         <Button
-            android:layout_width="match_parent"
+            style="@style/Button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="printResults"
-            android:padding="8dp"
             android:text="@string/submit"
             android:textColor="@color/dark" />
 

@@ -35,4 +35,9 @@
         <item name="android:textColor">@color/text_answers</item>
     </style>
 
+    <style name="Button" parent="Margins">
+        <item name="android:layout_marginBottom">@dimen/regular_gap</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
 </resources>

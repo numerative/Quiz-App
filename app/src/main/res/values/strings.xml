@@ -31,5 +31,11 @@
     <string name="submit">Submit</string>
 
     <!--Answer-->
-    <string name="answers">%s, you\'ve answered %d of 4 questions correctly. Bravo! \nHere are the correct answers. \nQ1. Donald Trump\nQ2. Vladimir Putin\nQ3. You shoud probably make your tea without Soy Sauce\nQ4. Okay, next time ask Michael for phone suggestions.</string>
+    <string name="star">Star</string>
+    <string name="answers">%s, you\'ve answered %d of 4 questions correctly. Bravo!
+        \nHere are the correct answers.
+        \nA1. Donald Trump
+        \nA2. Vladimir Putin
+        \nA3. You shoud probably make your tea without Soy Sauce
+        \nA4. Star.</string>
 </resources>

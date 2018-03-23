@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
     //Initializes Answer variables with correct answers. Checkbox is excluded for later checking.
     final int question1Answer = R.id.radio_button_q1a2;
     final int question2Answer = R.id.radio_button_q2a2;
-    final String question4Answer = "Michael";
+    CheckBox q3CheckBox1, q3CheckBox2, q3CheckBox3, q3CheckBox4;
+    String question4Answer;
     String contestantName;
     int numberOfCorrectAnswers = 0;
 
@@ -20,13 +21,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Initializing expensive tasks
+        q3CheckBox1 = findViewById(R.id.checkbox_q3a1);
+        q3CheckBox2 = findViewById(R.id.checkbox_q3a2);
+        q3CheckBox3 = findViewById(R.id.checkbox_q3a3);
+        q3CheckBox4 = findViewById(R.id.checkbox_q3a4);
+
+        question4Answer = getResources().getString(R.string.star);
     }
 
-    //The following method will be called upon pressing the final result button
+    //Method called upon pressing Result button
     public String printResults(View view) {
 
         //Checks Answers one by one
-
         numberOfCorrectAnswers = 0;
 
         //Adding value by 1 if correct answer to question 1 is selected.
@@ -54,42 +61,41 @@ public class MainActivity extends AppCompatActivity {
         contestantName = nameBox.getText().toString();
 
         //Prints the name
-        printName(contestantName);
+        displayResult(contestantName);
         return (contestantName);
     }
 
-    // Method that checks correctness of question 1 answer
     public boolean checkQuestion1() {
-        RadioGroup rg = (RadioGroup) findViewById(R.id.radio_group_q1);
-        return (rg.getCheckedRadioButtonId() == question1Answer);
+        RadioGroup radioGroup = findViewById(R.id.radio_group_q1);
+        return (radioGroup.getCheckedRadioButtonId() == question1Answer);
     }
 
-    // Method that checks correctness of question 2 answer
     public boolean checkQuestion2() {
-        RadioGroup rg = (RadioGroup) findViewById(R.id.radio_group_q2);
-        return (rg.getCheckedRadioButtonId() == question2Answer);
+        RadioGroup radioGroup = findViewById(R.id.radio_group_q2);
+        return (radioGroup.getCheckedRadioButtonId() == question2Answer);
     }
 
-    //Method that checks correctness of question 3 answer
     public boolean checkQuestion3() {
-        CheckBox cb1 = findViewById(R.id.checkbox_q3a1);
-        CheckBox cb2 = findViewById(R.id.checkbox_q3a2);
-        CheckBox cb3 = findViewById(R.id.checkbox_q3a3);
-        CheckBox cb4 = findViewById(R.id.checkbox_q3a4);
-        return (cb1.isChecked() && !cb2.isChecked() && cb3.isChecked() && cb4.isChecked());
+        q3CheckBox1 = findViewById(R.id.checkbox_q3a1);
+        q3CheckBox2 = findViewById(R.id.checkbox_q3a2);
+        q3CheckBox3 = findViewById(R.id.checkbox_q3a3);
+        q3CheckBox4 = findViewById(R.id.checkbox_q3a4);
+        return (q3CheckBox1.isChecked() &&
+                !q3CheckBox2.isChecked() &&
+                q3CheckBox3.isChecked() &&
+                q3CheckBox4.isChecked());
     }
 
-    //Method that checks correctness of question 4 answer
     public boolean checkQuestion4() {
-        EditText editText = (EditText) findViewById(R.id.edit_text_q4a);
-        String textValue = editText.getText().toString();
-        return (textValue.equalsIgnoreCase(question4Answer));
+        EditText q4EditText = findViewById(R.id.edit_text_q4a);
+        String q4Answer = q4EditText.getText().toString().trim();
+        return (q4Answer.equalsIgnoreCase(question4Answer));
     }
 
-    //    Method that displays contestant name.
-    public void printName(String contestantName) {
-        TextView displayResults = (TextView) findViewById(R.id.results);
-        displayResults.setText(getResources().getString(R.string.answers, contestantName, numberOfCorrectAnswers));
+    public void displayResult(String contestantName) {
+        TextView displayResults = findViewById(R.id.results);
+        displayResults.setText(getResources().
+                getString(R.string.answers, contestantName, numberOfCorrectAnswers));
     }
 
 
