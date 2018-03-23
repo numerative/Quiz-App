@@ -6,19 +6,31 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorButtonNormal">@color/text_answers</item>
+    </style>
+    <!--Start and End Margins-->
+    <style name="Margins">
+        <item name="android:layout_marginEnd">@dimen/regular_gap</item>
+        <item name="android:layout_marginStart">@dimen/regular_gap</item>
     </style>
 
-    <style name="Questions">
+    <style name="EditText" parent="Margins">
+        <item name="android:textColor">@color/light</item>
+        <item name="android:textColorHint">@color/edit_text_hint_color</item>
+    </style>
+
+    <style name="Questions" parent="Margins">
         <!--Style for questions.-->
         <item name="android:textSize">@dimen/question_text_size</item>
         <item name="android:textColor">@color/text_questions</item>
-        <item name="android:padding">@dimen/regular_gap</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <style name="Answers">
+    <style name="Answers" parent="Margins">
         <!--Style for Answers.-->
-        <item name="android:paddingLeft">@dimen/regular_gap</item>
+        <item name="android:layout_marginStart">@dimen/regular_gap</item>
+        <item name="android:paddingStart">@dimen/regular_gap</item>
         <item name="android:textSize">@dimen/answer_text_size</item>
         <item name="android:textColor">@color/text_answers</item>
     </style>

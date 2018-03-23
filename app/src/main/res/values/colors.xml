@@ -2,10 +2,12 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">@color/light</color>
 
     <!--Custom Colours-->
     <color name="dark">#303F9F</color>
+    <color name="light">#ffffff</color>
+    <color name="edit_text_hint_color">#eeeeee</color>
     <color name="text_questions">#ffffff</color>
-    <color name="text_answers">#ffffff</color>
+    <color name="text_answers">#E8EAF6</color>
 </resources>

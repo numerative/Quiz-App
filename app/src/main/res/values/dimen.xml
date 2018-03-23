@@ -5,5 +5,8 @@
     <dimen name="answer_text_size">16sp</dimen>
 
     <!--Margin and Padding Values-->
+    <dimen name="minimum_gap">4dp</dimen>
     <dimen name="regular_gap">8dp</dimen>
+    <dimen name="friendly_gap">16dp</dimen>
+    <dimen name="breathing_gap">24dp</dimen>
 </resources>
