@@ -1,7 +1,7 @@
 package com.example.android.quizapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     //    Method that displays contestant name.
     public void printName(String contestantName) {
         TextView displayResults = (TextView) findViewById(R.id.results);
-        displayResults.setText(contestantName + ", you've answered " + numberOfCorrectAnswers + " of 4 questions correctly. Bravo!" + "\nHere are the correct answers. \nQ1. Donald Trump\nQ2. Vladimir Putin\nQ3. You shoud probably make your tea without Soy Sauce\nQ4. Okay, next time ask Michael for phone suggestions.");
+        displayResults.setText(getResources().getString(R.string.answers, contestantName, numberOfCorrectAnswers));
     }
 
 

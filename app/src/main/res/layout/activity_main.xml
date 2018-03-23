@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.quizapp.MainActivity"
-    android:background="@color/dark">
+    android:background="@color/dark"
+    tools:context="com.example.android.quizapp.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:id="@+id/contestant_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="@string/edit_text_name_hint"
             android:padding="8dp" />
 
         <View
@@ -27,7 +27,7 @@
             style="@style/Questions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Q1. Who is the President of the United States?" />
+            android:text="@string/Q1" />
 
         <RadioGroup
             android:id="@+id/radio_group_q1"
@@ -41,21 +41,21 @@
                 style="@style/Answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hillary Clinton" />
+                android:text="@string/Q1_option1" />
 
             <RadioButton
                 android:id="@+id/radio_button_q1a2"
                 style="@style/Answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Donald Trump" />
+                android:text="@string/Q1_option2" />
 
             <RadioButton
                 android:id="@+id/radio_button_q1a3"
                 style="@style/Answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Barack Obama" />
+                android:text="@string/Q1_option3" />
         </RadioGroup>
 
         <View
@@ -66,7 +66,7 @@
             style="@style/Questions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Q2. Who is the Prime Minister of Russia?" />
+            android:text="@string/Q2" />
 
         <RadioGroup
             android:id="@+id/radio_group_q2"
@@ -80,21 +80,21 @@
                 style="@style/Answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mikhail Gorbachev" />
+                android:text="@string/Q1_option1" />
 
             <RadioButton
                 android:id="@+id/radio_button_q2a2"
                 style="@style/Answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vladimir Putin" />
+                android:text="@string/Q2_option2" />
 
             <RadioButton
                 android:id="@+id/radio_button_q2a3"
                 style="@style/Answers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dmitri Goskhav" />
+                android:text="@string/Q2_option3" />
         </RadioGroup>
 
         <View
@@ -105,35 +105,35 @@
             style="@style/Questions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Q3. Which of these ingredients are put in Chai Tea?" />
+            android:text="@string/Q3" />
 
         <CheckBox
             android:id="@+id/checkbox_q3a1"
             style="@style/Answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Milk" />
+            android:text="@string/Q3_option1" />
 
         <CheckBox
             android:id="@+id/checkbox_q3a2"
             style="@style/Answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Soy Sauce" />
+            android:text="@string/Q3_option2" />
 
         <CheckBox
             android:id="@+id/checkbox_q3a3"
             style="@style/Answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tea" />
+            android:text="@string/Q3_option3" />
 
         <CheckBox
             android:id="@+id/checkbox_q3a4"
             style="@style/Answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sugar" />
+            android:text="@string/Q3_option4" />
 
         <View
             android:layout_width="match_parent"
@@ -143,13 +143,13 @@
             style="@style/Questions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Q4. Who suggested the phone you currently use?" />
+            android:text="@string/Q4" />
 
         <EditText
             android:id="@+id/edit_text_q4a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your Answer here"
+            android:hint="@string/Q4_answer_edit_text"
             android:padding="8dp" />
 
         <View
@@ -161,7 +161,7 @@
             android:layout_height="wrap_content"
             android:onClick="printResults"
             android:padding="8dp"
-            android:text="let's find out the right answers" />
+            android:text="@string/submit" />
 
         <TextView
             android:id="@+id/results"
