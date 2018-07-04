@@ -7,6 +7,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //Initializes Answer variables with correct answers. Checkbox is excluded for later checking.
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     String question4Answer;
     String contestantName;
     int numberOfCorrectAnswers = 0;
+    RadioGroup radioGroup1, radioGroup2;
+    EditText q4EditText;
+    TextView displayResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         q3CheckBox2 = findViewById(R.id.checkbox_q3a2);
         q3CheckBox3 = findViewById(R.id.checkbox_q3a3);
         q3CheckBox4 = findViewById(R.id.checkbox_q3a4);
+        radioGroup1 = findViewById(R.id.radio_group_q1);
+        radioGroup2 = findViewById(R.id.radio_group_q2);
+        q4EditText = findViewById(R.id.edit_text_q4a);
+        displayResults = findViewById(R.id.results); //Answers
 
         question4Answer = getResources().getString(R.string.star);
     }
@@ -35,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Checks Answers one by one
         numberOfCorrectAnswers = 0;
+
+        displayResults.setText(null); //Reset display result TextView
 
         //Adding value by 1 if correct answer to question 1 is selected.
         if (checkQuestion1()) {
@@ -60,26 +70,25 @@ public class MainActivity extends AppCompatActivity {
         final EditText nameBox = (EditText) findViewById(R.id.contestant_name);
         contestantName = nameBox.getText().toString();
 
-        //Prints the name
-        displayResult(contestantName);
-        return (contestantName);
+        if (checkUnattemptedAnswers()) {
+            //Prints the name
+            displayResult(contestantName);
+            return (contestantName);
+        } else {
+            Toast.makeText(this, R.string.answer_it, Toast.LENGTH_SHORT).show();
+            return contestantName;
+        }
     }
 
     public boolean checkQuestion1() {
-        RadioGroup radioGroup = findViewById(R.id.radio_group_q1);
-        return (radioGroup.getCheckedRadioButtonId() == question1Answer);
+        return (radioGroup1.getCheckedRadioButtonId() == question1Answer);
     }
 
     public boolean checkQuestion2() {
-        RadioGroup radioGroup = findViewById(R.id.radio_group_q2);
-        return (radioGroup.getCheckedRadioButtonId() == question2Answer);
+        return (radioGroup2.getCheckedRadioButtonId() == question2Answer);
     }
 
     public boolean checkQuestion3() {
-        q3CheckBox1 = findViewById(R.id.checkbox_q3a1);
-        q3CheckBox2 = findViewById(R.id.checkbox_q3a2);
-        q3CheckBox3 = findViewById(R.id.checkbox_q3a3);
-        q3CheckBox4 = findViewById(R.id.checkbox_q3a4);
         return (q3CheckBox1.isChecked() &&
                 !q3CheckBox2.isChecked() &&
                 q3CheckBox3.isChecked() &&
@@ -87,16 +96,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean checkQuestion4() {
-        EditText q4EditText = findViewById(R.id.edit_text_q4a);
         String q4Answer = q4EditText.getText().toString().trim();
         return (q4Answer.equalsIgnoreCase(question4Answer));
     }
 
     public void displayResult(String contestantName) {
-        TextView displayResults = findViewById(R.id.results);
         displayResults.setText(getResources().
                 getString(R.string.answers, contestantName, numberOfCorrectAnswers));
     }
 
-
+    public boolean checkUnattemptedAnswers() {
+        if (radioGroup1.getCheckedRadioButtonId() == -1 ||
+                radioGroup2.getCheckedRadioButtonId() == -1 ||
+                (!q3CheckBox1.isChecked() &&
+                        !q3CheckBox2.isChecked() &&
+                        !q3CheckBox3.isChecked() &&
+                        !q3CheckBox4.isChecked()) ||
+                q4EditText.getText().length() == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

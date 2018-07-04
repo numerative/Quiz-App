@@ -4,26 +4,26 @@
     <string name="edit_text_name_hint">Name</string>
 
     <!--Questions-->
-    <string name="Q1">Q1. Who is the President of the United States?</string>
-    <string name="Q2">Q2. Who is the Prime Minister of Russia?</string>
-    <string name="Q3">Q3. Which of these ingredients are put in Chai Tea?</string>
-    <string name="Q4">Q4. Twinkle twinkle, little ______ ?</string>
+    <string name="Q1">Q1. Which of the following is a car from Maruti Suzuki?</string>
+    <string name="Q2">Q2. Honda\'s Fit is known by which name in India?</string>
+    <string name="Q3">Q3. Select all German car companies</string>
+    <string name="Q4">Q4. Name the car manufacturer to whom this logo belongs</string>
 
     <!--Question 1 options-->
-    <string name="Q1_option1">Hillary Clinton</string>
-    <string name="Q1_option2">Donald Trump</string>
-    <string name="Q1_option3">Barack Obama</string>
+    <string name="Q1_option1">Qualis</string>
+    <string name="Q1_option2">Esteem</string>
+    <string name="Q1_option3">Santro</string>
 
     <!--Question 2 options-->
-    <string name="Q2_option1">Mikhail Gorbachev</string>
-    <string name="Q2_option2">Vladimir Putin</string>
-    <string name="Q2_option3">Dmitri Goskhav</string>
+    <string name="Q2_option1">Accord</string>
+    <string name="Q2_option2">Jazz</string>
+    <string name="Q2_option3">Brio</string>
 
     <!--Question 3 options-->
-    <string name="Q3_option1">Milk</string>
-    <string name="Q3_option2">Soy Sauce</string>
-    <string name="Q3_option3">Tea</string>
-    <string name="Q3_option4">Sugar</string>
+    <string name="Q3_option1">BMW</string>
+    <string name="Q3_option2">Subaru</string>
+    <string name="Q3_option3">Audi</string>
+    <string name="Q3_option4">Volkswagen</string>
 
     <!--Question 4 answer hint-->
     <string name="Q4_answer_edit_text">Fill in the Blank</string>
@@ -31,11 +31,15 @@
     <string name="submit">Submit</string>
 
     <!--Answer-->
-    <string name="star">Star</string>
+    <string name="star">Porsche</string>
     <string name="answers">%s, you\'ve answered %d of 4 questions correctly. Bravo!
         \nHere are the correct answers.
-        \nA1. Donald Trump
-        \nA2. Vladimir Putin
-        \nA3. You shoud probably make your tea without Soy Sauce
-        \nA4. Star.</string>
+        \nA1. Esteem
+        \nA2. Jazz
+        \nA3. Subaru is an Japanese company
+        \nA4. Porsche
+    </string>
+
+    <!--Unattempted Answers-->
+    <string name="answer_it">Please attempt all questions</string>
 </resources>
